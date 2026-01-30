@@ -1,0 +1,48 @@
+name: Validate ID.txt
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate_ID:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check first line has no brackets
+        run: |
+          first_line=$(head -n 1 ID.txt)
+          if [[ $first_line == *"["* || $first_line == *"]"* ]]; then
+            echo "Error: First line of ID.txt should be your full name and not contain [ or ] characters"
+            echo "Current first line: $first_line"
+            exit 1
+          else
+            echo "First line format is valid."
+          fi 
+          
+      - name: Check second line is a valid email address
+        run: |
+          second_line=$(sed -n '2p' ID.txt)
+          if [[ ! $second_line =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
+            echo "Error: Second line of ID.txt should be a valid email address"
+            echo "Current second line: $second_line"
+            exit 1
+          else
+            echo "Email address format is valid."
+          fi
+          
+      - name: Check third line is a 10-digit student ID
+        run: |
+          third_line=$(sed -n '3p' ID.txt)
+          if [[ ! $third_line =~ ^[0-9]{10}$ ]]; then
+            echo "Error: Third line of ID.txt should be a 10-digit student ID"
+            echo "Current third line: $third_line"
+            exit 1
+          else
+            echo "Student ID format is valid."
+          fi 

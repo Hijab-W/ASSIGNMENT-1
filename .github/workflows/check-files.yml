@@ -1,0 +1,177 @@
+name: Check Q1 Submission
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  check_q1_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+       
+      - name: Check if submission/q1.txt exists
+        run: |
+          if [ ! -f "submission/q1.txt" ]; then
+            echo "Error: submission/q1.txt does not exist"
+            exit 1
+          else
+            echo "submission/q1.txt exists."
+          fi
+          
+      - name: Check if submission/q1.txt is a text file
+        run: |
+          if file "submission/q1.txt" | grep -q "text"; then
+            echo "submission/q1.txt is a text file."
+          else
+            echo "Error: submission/q1.txt is not a text file"
+            exit 1
+          fi 
+
+      - name: Check if submission/q2.txt exists
+        run: |
+          if [ ! -f "submission/q2.txt" ]; then
+            echo "Error: submission/q2.txt does not exist"
+            exit 1
+          else
+            echo "submission/q2.txt exists."
+          fi
+          
+      - name: Check if submission/q2.txt is a text file
+        run: |
+          if file "submission/q2.txt" | grep -q "text"; then
+            echo "submission/q2.txt is a text file."
+          else
+            echo "Error: submission/q2.txt is not a text file"
+            exit 1
+          fi 
+
+      - name: Check if submission/q3.txt exists
+        run: |
+          if [ ! -f "submission/q3.txt" ]; then
+            echo "Error: submission/q3.txt does not exist"
+            exit 1
+          else
+            echo "submission/q3.txt exists."
+          fi
+        
+      - name: Check if submission/q3.txt is a text file
+        run: |
+          if file "submission/q3.txt" | grep -q "text"; then
+            echo "submission/q3.txt is a text file."
+          else
+            echo "Error: submission/q3.txt is not a text file"
+            exit 1
+          fi 
+          
+      - name: Check if submission/q4.png exists
+        run: |
+          if [ ! -f "submission/q4.png" ]; then
+            echo "Error: submission/q4.png does not exist"
+            exit 1
+          else
+            echo "submission/q4.png exists."
+          fi
+          
+      - name: Check if submission/q4.png is a png file
+        run: |
+          if file "submission/q4.png" | grep -q "PNG"; then
+            echo "submission/q4.png is a PNG file."
+          else
+            echo "Error: submission/q4.png is not a PNG file"
+            exit 1
+          fi 
+          
+      - name: Check if submission/q5.txt exists
+        run: |
+          if [ ! -f "submission/q5.txt" ]; then
+            echo "Error: submission/q5.txt does not exist"
+            exit 1
+          else
+            echo "submission/q5.txt exists."
+          fi
+          
+      - name: Check if submission/q5.txt is a text file
+        run: |
+          if file "submission/q5.txt" | grep -q "text"; then
+            echo "submission/q5.txt is a text file."
+          else
+            echo "Error: submission/q5.txt is not a text file"
+            exit 1
+          fi 
+          
+      - name: Check if submission/q6.txt exists
+        run: |
+          if [ ! -f "submission/q6.txt" ]; then
+            echo "Error: submission/q6.txt does not exist"
+            exit 1
+          else
+            echo "submission/q6.txt exists."
+          fi
+
+      - name: Check if submission/q6.txt is a text file
+        run: |
+          if file "submission/q6.txt" | grep -q "text"; then
+            echo "submission/q6.txt is a text file."
+          else
+            echo "Error: submission/q6.txt is not a text file"
+            exit 1
+          fi  
+
+      - name: Check if submission/q7.txt exists
+        run: |
+          if [ ! -f "submission/q7.txt" ]; then
+            echo "Error: submission/q7.txt does not exist"
+            exit 1
+          else
+            echo "submission/q7.txt exists."
+          fi
+
+      - name: Check if submission/q7.txt is a text file
+        run: |
+          if file "submission/q7.txt" | grep -q "text"; then
+            echo "submission/q7.txt is a text file."
+          else
+            echo "Error: submission/q7.txt is not a text file"
+            exit 1
+          fi 
+
+      - name: Check if submission/q8.txt exists
+        run: |
+          if [ ! -f "submission/q8.txt" ]; then
+            echo "Error: submission/q8.txt does not exist"
+            exit 1
+          else
+            echo "submission/q8.txt exists."
+          fi
+          
+      - name: Check if submission/q8.txt is a text file
+        run: |
+          if file "submission/q8.txt" | grep -q "text"; then
+            echo "submission/q8.txt is a text file."
+          else
+            echo "Error: submission/q8.txt is not a text file"
+            exit 1
+          fi 
+
+      - name: Check if submission/q9a.txt exists
+        run: |
+          if [ ! -f "submission/q9a.txt" ]; then
+            echo "Error: submission/q9a.txt does not exist"
+            exit 1
+          else
+            echo "submission/q9a.txt exists."
+          fi
+
+      - name: Check if submission/q9b.txt exists
+        run: |
+          if [ ! -f "submission/q9b.txt" ]; then
+            echo "Error: submission/q9b.txt does not exist"
+            exit 1
+          else
+            echo "submission/q9b.txt exists."
+          fi
