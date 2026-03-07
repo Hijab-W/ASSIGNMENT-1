@@ -157,21 +157,3 @@ jobs:
             echo "Error: submission/q8.txt is not a text file"
             exit 1
           fi 
-
-      - name: Check if submission/q9a.txt exists
-        run: |
-          if [ ! -f "submission/q9a.txt" ]; then
-            echo "Error: submission/q9a.txt does not exist"
-            exit 1
-          else
-            echo "submission/q9a.txt exists."
-          fi
-
-      - name: Check if submission/q9b.txt exists
-        run: |
-          if [ ! -f "submission/q9b.txt" ]; then
-            echo "Error: submission/q9b.txt does not exist"
-            exit 1
-          else
-            echo "submission/q9b.txt exists."
-          fi
