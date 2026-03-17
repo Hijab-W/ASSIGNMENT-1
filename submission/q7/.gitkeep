@@ -1,0 +1,7 @@
+give a numerical approximation to the given definite integral to within 0.01% accuracy.11:51 PMNumerically integrate the given expressionNumerically integrate the given expressionThe integrand is a perfect derivative! Notice that:
+ddx[tan⁡(x)⋅log⁡ ⁣(x2+sin⁡(x3))]=(tan⁡2x+1)log⁡(x2+sin⁡x3)⏟sec⁡2x⋅log⁡(⋯ )+(3x2cos⁡x3+2x)tan⁡xx2+sin⁡x3⏟tan⁡x⋅ddx[⋯ ]\frac{d}{dx}\left[\tan(x) \cdot \log\!\left(x^2 + \sin(x^3)\right)\right] = \underbrace{(\tan^2 x + 1)\log(x^2+\sin x^3)}_{\sec^2 x \cdot \log(\cdots)} + \underbrace{\frac{(3x^2\cos x^3 + 2x)\tan x}{x^2 + \sin x^3}}_{\tan x \cdot \frac{d}{dx}[\cdots]}dxd​[tan(x)⋅log(x2+sin(x3))]=sec2x⋅log(⋯)(tan2x+1)log(x2+sinx3)​​+tanx⋅dxd​[⋯]x2+sinx3(3x2cosx3+2x)tanx​​​
+which is exactly the integrand. So by the Fundamental Theorem of Calculus:
+∫519[(tan⁡2x+1)log⁡(x2+sin⁡x3)+(3x2cos⁡x3+2x)tan⁡xx2+sin⁡x3]dx=[tan⁡(x)⋅log⁡(x2+sin⁡(x3))]519\int_5^{19} \left[(\tan^2 x+1)\log(x^2+\sin x^3)+\frac{(3x^2\cos x^3+2x)\tan x}{x^2+\sin x^3}\right]dx = \Big[\tan(x)\cdot\log(x^2+\sin(x^3))\Big]_5^{19}∫519​[(tan2x+1)log(x2+sinx3)+x2+sinx3(3x2cosx3+2x)tanx​]dx=[tan(x)⋅log(x2+sin(x3))]519​
+=tan⁡(19)⋅log⁡(192+sin⁡(193))−tan⁡(5)⋅log⁡(52+sin⁡(53))= \tan(19)\cdot\log(19^2+\sin(19^3)) - \tan(5)\cdot\log(5^2+\sin(5^3))=tan(19)⋅log(192+sin(193))−tan(5)⋅log(52+sin(53))
+≈11.6895\boxed{\approx 11.6895}≈11.6895​
+(all angles in radians). This is exact up to floating-point precision — well within 0.01% accuracy.
