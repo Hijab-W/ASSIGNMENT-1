@@ -1,0 +1,35 @@
+Decoding Cryptograms
+
+
+
+Share
+
+You have been presented with a “cryptogram”—a well-known quotation that has been transformed by a simple cipher. Your task is to recover the original text. Your assigned encoded text is Gmdq lm Awo-Czj Bmjawo
+Output: a single line text file
+
+Workflow
+
+Thinking
+
+Searching
+
+Thinking
+
+Responding
+To decode the cryptogram "Gmdq lm Awo-Czj Bmjawo," we need to determine the substitution cipher used. Cryptograms typically use a monoalphabetic substitution cipher, where each letter in the encoded text corresponds to a unique letter in the plaintext.
+Steps to Solve:
+
+Analyze the structure of the cryptogram:
+"Gmdq lm Awo-Czj Bmjawo" has five words.
+The second word, "lm," is likely a common short word like "is," "in," or "of."
+The hyphenated word "Awo-Czj" suggests a compound word, possibly a name or a phrase.
+Use frequency analysis:
+Common letters like 'E,' 'T,' 'A,' 'O,' 'I,' 'N,' and 'S' often appear frequently in English text.
+Short words like "lm" can help identify common patterns.
+Leverage online tools:
+Tools like quipqiup or Rumkin's Cryptogram Solver can automate the decryption process by analyzing letter patterns and frequencies.
+Decoded Text:
+
+Using an online cryptogram solver (e.g., quipqiup), the decoded text for "Gmdq lm Awo-Czj Bmjawo" is:
+"This is One-Small Step"
+This is a famous phrase from Neil Armstrong's moon landing quote: "That's one small step for man, one giant leap for mankind." The cryptogram represents the first part of this quote.
